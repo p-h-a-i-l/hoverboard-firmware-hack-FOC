@@ -251,14 +251,14 @@
 
 // ############################ VARIANT_BIPROPELLANT SETTINGS ############################
 #ifdef VARIANT_BIPROPELLANT
-  // #define SIDEBOARD_SERIAL_USART2
-  // #define CONTROL_SERIAL_USART2         // left sensor board cable, disable if ADC or PPM is used! For Arduino control check the hoverSerial.ino
-  // #define FEEDBACK_SERIAL_USART2        // left sensor board cable, disable if ADC or PPM is used!
-
-  // #define SIDEBOARD_SERIAL_USART3
-  #define CONTROL_SERIAL_USART3         // right sensor board cable, disable if I2C (nunchuk or lcd) is used! For Arduino control check the hoverSerial.ino
-  #define FEEDBACK_SERIAL_USART3        // right sensor board cable, disable if I2C (nunchuk or lcd) is used!
+//  #define SERIAL_USART2_IT
+  #define SERIAL_USART3_IT
+  #define USART2_BAUD 115200
+  #define USART3_BAUD 115200
 #endif
+  #define SERIAL_USART_IT_BUFFERTYPE unsigned char
+  #define USART2_WORDLENGTH UART_WORDLENGTH_8B
+  #define USART3_WORDLENGTH UART_WORDLENGTH_8B
 // ######################## END OF VARIANT_USART SETTINGS #########################
 
 
